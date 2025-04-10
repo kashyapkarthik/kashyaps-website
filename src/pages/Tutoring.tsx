@@ -1,55 +1,64 @@
 
-import CodeLine from '@/components/CodeLine';
+import React from 'react';
 import Layout from '@/components/Layout';
 
 const Tutoring = () => {
   return (
     <Layout>
-      <div className="p-2">
-        <CodeLine number={1}>
-          <span className="keyword">import</span> React <span className="keyword">from</span> <span className="string">'react'</span>;
-        </CodeLine>
-        <CodeLine number={2}>{''}</CodeLine>
-        <CodeLine number={3}>
-          <span className="keyword">const</span> <span className="function">Tutoring</span> = () <span>=&gt;</span> {'{'}
-        </CodeLine>
-        <CodeLine number={4} indent={1}>
-          <span className="keyword">return</span> (
-        </CodeLine>
-        <CodeLine number={5} indent={2}>
-          <span className="string">Tutoring Services</span>
-        </CodeLine>
-        <CodeLine number={6} indent={3}>
-          <span className="comment">// Your tutoring introduction goes here</span>
-        </CodeLine>
-        <CodeLine number={7} indent={2}>
-          <span className="string">Subjects</span>
-        </CodeLine>
-        <CodeLine number={8} indent={3}>
-          <span className="comment">// List of subjects you tutor</span>
-        </CodeLine>
-        <CodeLine number={9} indent={2}>
-          <span className="string">Rates</span>
-        </CodeLine>
-        <CodeLine number={10} indent={3}>
-          <span className="comment">// Your tutoring rates go here</span>
-        </CodeLine>
-        <CodeLine number={11} indent={2}>
-          <span className="string">Contact</span>
-        </CodeLine>
-        <CodeLine number={12} indent={3}>
-          <span className="comment">// How to request tutoring services</span>
-        </CodeLine>
-        <CodeLine number={13} indent={1}>
-          );
-        </CodeLine>
-        <CodeLine number={14}>
-          {'};'}
-        </CodeLine>
-        <CodeLine number={15}>{''}</CodeLine>
-        <CodeLine number={16}>
-          <span className="keyword">export</span> <span className="keyword">default</span> Tutoring;
-        </CodeLine>
+      <div className="p-6 max-w-3xl mx-auto">
+        <h1 className="text-2xl font-bold mb-4">Tutoring Services</h1>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Introduction</h2>
+          <p className="mb-3">
+            I offer personalized tutoring services for students at all levels who want to improve
+            their programming skills or need help with specific computer science concepts.
+          </p>
+          <p>
+            With my experience in both industry and education, I can provide practical insights
+            and clear explanations to help you overcome challenges and achieve your learning goals.
+          </p>
+        </section>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Subjects</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Web Development (HTML, CSS, JavaScript, React)</li>
+            <li>Programming Fundamentals (Python, Java)</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Database Design & SQL</li>
+            <li>Computer Science Theory</li>
+            <li>Interview Preparation</li>
+          </ul>
+        </section>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Rates</h2>
+          <div className="border rounded p-4 mb-4">
+            <h3 className="font-medium mb-1">One-on-One Sessions</h3>
+            <p>$60 per hour</p>
+          </div>
+          <div className="border rounded p-4 mb-4">
+            <h3 className="font-medium mb-1">Group Sessions (2-4 students)</h3>
+            <p>$40 per hour per student</p>
+          </div>
+          <div className="border rounded p-4">
+            <h3 className="font-medium mb-1">Package Deals</h3>
+            <p>10% discount when booking 5 or more sessions</p>
+          </div>
+        </section>
+        
+        <section>
+          <h2 className="text-xl font-semibold mb-2">Contact</h2>
+          <p className="mb-3">
+            To request tutoring services or discuss your specific needs, please reach out via:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Email: tutor@kashyapkarthik.com</li>
+            <li>Phone: (123) 456-7890</li>
+            <li>Contact form on this website</li>
+          </ul>
+        </section>
       </div>
     </Layout>
   );

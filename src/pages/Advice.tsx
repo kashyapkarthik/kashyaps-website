@@ -1,54 +1,84 @@
-import CodeLine from '@/components/CodeLine';
+
+import React from 'react';
 import Layout from '@/components/Layout';
 
 const Advice = () => {
   return (
     <Layout>
-      <div className="p-2">
-        <CodeLine number={1}>
-          <span className="keyword">import</span> React <span className="keyword">from</span> <span className="string">'react'</span>;
-        </CodeLine>
-        <CodeLine number={2}>{''}</CodeLine>
-        <CodeLine number={3}>
-          <span className="keyword">const</span> <span className="function">Advice</span> = () <span>=&gt;</span> {'{'}
-        </CodeLine>
-        <CodeLine number={4} indent={1}>
-          <span className="keyword">return</span> (
-        </CodeLine>
-        <CodeLine number={5} indent={2}>
-          <span className="string">Professional Advice</span>
-        </CodeLine>
-        <CodeLine number={6} indent={3}>
-          <span className="comment">// Your advice introduction goes here</span>
-        </CodeLine>
-        <CodeLine number={7} indent={2}>
-          <span className="string">Career Development</span>
-        </CodeLine>
-        <CodeLine number={8} indent={3}>
-          <span className="comment">// Your career advice goes here</span>
-        </CodeLine>
-        <CodeLine number={9} indent={2}>
-          <span className="string">Professional Growth</span>
-        </CodeLine>
-        <CodeLine number={10} indent={3}>
-          <span className="comment">// Your professional growth tips go here</span>
-        </CodeLine>
-        <CodeLine number={11} indent={2}>
-          <span className="string">Resources</span>
-        </CodeLine>
-        <CodeLine number={12} indent={3}>
-          <span className="comment">// Recommended resources go here</span>
-        </CodeLine>
-        <CodeLine number={13} indent={1}>
-          );
-        </CodeLine>
-        <CodeLine number={14}>
-          {'};'}
-        </CodeLine>
-        <CodeLine number={15}>{''}</CodeLine>
-        <CodeLine number={16}>
-          <span className="keyword">export</span> <span className="keyword">default</span> Advice;
-        </CodeLine>
+      <div className="p-6 max-w-3xl mx-auto">
+        <h1 className="text-2xl font-bold mb-4">Professional Advice</h1>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Introduction</h2>
+          <p className="mb-3">
+            Based on my experience in the tech industry and education, I offer guidance
+            to help you navigate your career in software development and computer science.
+          </p>
+          <p>
+            Whether you're just starting out or looking to advance in your current role,
+            the advice here can help you make informed decisions about your professional path.
+          </p>
+        </section>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Career Development</h2>
+          <div className="mb-4">
+            <h3 className="font-medium mb-1">For Beginners</h3>
+            <p>
+              Focus on building a strong foundation in programming fundamentals before
+              specializing. Create small projects that demonstrate your skills and understanding.
+              Consider contributing to open-source projects to gain real-world experience.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-medium mb-1">For Experienced Professionals</h3>
+            <p>
+              Stay updated with emerging technologies while deepening expertise in your
+              specialization. Build your personal brand through speaking, writing, or
+              mentoring. Consider leadership roles or specialized technical paths based on your strengths.
+            </p>
+          </div>
+        </section>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Professional Growth</h2>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <strong>Continuous Learning:</strong> Dedicate time each week to learning new technologies or improving existing skills.
+            </li>
+            <li>
+              <strong>Networking:</strong> Build meaningful professional relationships through meetups, conferences, and online communities.
+            </li>
+            <li>
+              <strong>Portfolio Development:</strong> Regularly update your projects to showcase your latest skills and accomplishments.
+            </li>
+            <li>
+              <strong>Work-Life Balance:</strong> Maintain sustainable work habits to prevent burnout and maintain long-term productivity.
+            </li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2 className="text-xl font-semibold mb-2">Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="border rounded p-4">
+              <h3 className="font-medium mb-1">Books</h3>
+              <ul className="list-disc pl-5">
+                <li>Clean Code by Robert C. Martin</li>
+                <li>The Pragmatic Programmer by David Thomas</li>
+                <li>Cracking the Coding Interview by Gayle L. McDowell</li>
+              </ul>
+            </div>
+            <div className="border rounded p-4">
+              <h3 className="font-medium mb-1">Online Platforms</h3>
+              <ul className="list-disc pl-5">
+                <li>LeetCode for algorithm practice</li>
+                <li>Coursera and Udemy for structured courses</li>
+                <li>GitHub for project collaboration</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </Layout>
   );
