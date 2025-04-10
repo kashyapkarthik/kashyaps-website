@@ -11,7 +11,7 @@ const CV = () => {
         </CodeLine>
         <CodeLine number={2}></CodeLine>
         <CodeLine number={3}>
-          <span className="keyword">const</span> <span className="function">CV</span> = () <span>=></span> {'{'} 
+          <span className="keyword">const</span> <span className="function">CV</span> = () <span>=&gt;</span> {'{'}
         </CodeLine>
         <CodeLine number={4} indent={1}>
           <span className="keyword">return</span> (
