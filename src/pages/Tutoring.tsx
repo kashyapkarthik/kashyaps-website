@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 const Tutoring = () => {
   return (
     <Layout>
-      <div className="p-6 max-w-3xl mx-auto">
+      <div className="p-6 mx-0">
         <h1 className="text-2xl font-bold mb-4">Tutoring Services</h1>
         
         <section className="mb-6">

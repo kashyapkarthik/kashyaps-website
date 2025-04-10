@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 const YouTube = () => {
   return (
     <Layout>
-      <div className="p-6 max-w-3xl mx-auto">
+      <div className="p-6 mx-0">
         <h1 className="text-2xl font-bold mb-4">My YouTube Channel</h1>
         
         <section className="mb-6">

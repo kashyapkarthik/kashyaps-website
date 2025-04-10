@@ -5,7 +5,7 @@ import Layout from '@/components/Layout';
 const CV = () => {
   return (
     <Layout>
-      <div className="p-6 max-w-3xl mx-auto">
+      <div className="p-6 mx-0">
         <h1 className="text-2xl font-bold mb-4">Curriculum Vitae</h1>
         
         <section className="mb-6">
@@ -46,7 +46,7 @@ const CV = () => {
         
         <section>
           <h2 className="text-xl font-semibold mb-2">Skills</h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h3 className="font-medium mb-1">Programming Languages</h3>
               <p>JavaScript, TypeScript, Python, Java, C++</p>
