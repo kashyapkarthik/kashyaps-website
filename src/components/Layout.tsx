@@ -57,7 +57,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </button>
         <div className="border-l border-border h-8"></div>
         <div className="px-4 py-2">
-          <span className="text-foreground">{getCurrentFile()}.tsx</span>
+          <span className="text-foreground font-bold">Kashyap Karthik</span>
         </div>
       </div>
 
