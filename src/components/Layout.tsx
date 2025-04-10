@@ -64,15 +64,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="flex flex-1 overflow-hidden">
         {/* Slimmer Sidebar without Explorer label */}
         <div className={`border-r border-border bg-secondary 
-          ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'} 
-          transition-all duration-300 ease-in-out overflow-hidden flex flex-col`}
+          transition-all duration-300 ease-in-out overflow-hidden flex flex-col
+          ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'}`}
         >
-          <div className="flex-1 overflow-y-auto p-1.5">
+          <div className="flex-1 overflow-y-auto p-1.5 min-w-36 md:min-w-44 whitespace-nowrap">
             {navItems.map(item => (
               <Link 
                 to={item.path} 
                 key={item.path}
-                className={`flex items-center p-1.5 text-sm rounded-sm transition-all duration-200
+                className={`flex items-center p-1.5 text-sm rounded-sm transition-colors duration-200
                   ${location.pathname === item.path 
                     ? 'bg-muted text-foreground' 
                     : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground hover:translate-x-0.5'}`}
