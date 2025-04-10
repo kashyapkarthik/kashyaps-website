@@ -1,13 +1,12 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   FileText, 
   User, 
   Youtube, 
   BookOpen, 
-  HelpCircle, 
+  HelpCircle,
   ChevronDown,
   Menu
 } from 'lucide-react';
@@ -47,8 +46,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* Editor Toolbar */}
-      <div className="flex items-center border-b border-border bg-secondary text-sm">
+      {/* Simplified Top Bar with only toggle button */}
+      <div className="flex items-center border-b border-border bg-secondary text-sm h-10">
         <button 
           onClick={() => setSidebarOpen(!sidebarOpen)}
           className="p-2 hover:bg-muted"
@@ -57,20 +56,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Menu size={16} />
         </button>
         <div className="border-l border-border h-8"></div>
-        <Tabs defaultValue={location.pathname} className="flex-1">
-          <TabsList className="bg-transparent p-0 h-auto">
-            {navItems.map(item => (
-              <Link to={item.path} key={item.path}>
-                <TabsTrigger
-                  value={item.path}
-                  className={`px-4 py-2 rounded-none data-[state=active]:shadow-none data-[state=active]:bg-background data-[state=active]:border-b-2 data-[state=active]:border-primary`}
-                >
-                  {item.label}
-                </TabsTrigger>
-              </Link>
-            ))}
-          </TabsList>
-        </Tabs>
+        <div className="px-4 py-2">
+          <span className="text-foreground">{getCurrentFile()}.tsx</span>
+        </div>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
