@@ -1,43 +1,43 @@
 
-import CodeLine from '@/components/CodeLine';
 import Layout from '@/components/Layout';
 
 const Index = () => {
   return (
     <Layout>
-      <div className="p-2">
-        <CodeLine number={1}>
-          <span className="keyword">import</span> React <span className="keyword">from</span> <span className="string">'react'</span>;
-        </CodeLine>
-        <CodeLine number={2}>{''}</CodeLine>
-        <CodeLine number={3}>
-          <span className="keyword">const</span> <span className="function">AboutMe</span> = () <span>=&gt;</span> {'{'}
-        </CodeLine>
-        <CodeLine number={4} indent={1}>
-          <span className="keyword">return</span> (
-        </CodeLine>
-        <CodeLine number={5} indent={2}>
-          <span className="string">Hello, I'm Kashyap Karthik</span>
-        </CodeLine>
-        <CodeLine number={6} indent={2}>
-          <span className="comment">// Brief introduction</span>
-        </CodeLine>
-        <CodeLine number={7} indent={2}>
-          <span className="comment">// Skills and interests</span>
-        </CodeLine>
-        <CodeLine number={8} indent={2}>
-          <span className="comment">// Background information</span>
-        </CodeLine>
-        <CodeLine number={9} indent={1}>
-          );
-        </CodeLine>
-        <CodeLine number={10}>
-          {'};'}
-        </CodeLine>
-        <CodeLine number={11}>{''}</CodeLine>
-        <CodeLine number={12}>
-          <span className="keyword">export</span> <span className="keyword">default</span> AboutMe;
-        </CodeLine>
+      <div className="p-6 max-w-3xl mx-auto">
+        <h1 className="text-2xl font-bold mb-4">Hello, I'm Kashyap Karthik</h1>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">About Me</h2>
+          <p className="mb-3">
+            I'm a passionate software developer and educator with experience in building web applications
+            and teaching programming concepts to students of all levels.
+          </p>
+          <p>
+            I believe in creating clean, efficient code and helping others understand
+            the beauty of programming through clear explanations and practical examples.
+          </p>
+        </section>
+        
+        <section className="mb-6">
+          <h2 className="text-xl font-semibold mb-2">Skills & Interests</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Web Development (React, TypeScript, Node.js)</li>
+            <li>Computer Science Education</li>
+            <li>Algorithm Design & Problem Solving</li>
+            <li>Technical Content Creation</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2 className="text-xl font-semibold mb-2">Background</h2>
+          <p>
+            With a background in computer science and education, I focus on bridging the gap
+            between complex technical concepts and clear, accessible learning experiences.
+            I regularly create content through my YouTube channel and provide personalized
+            tutoring for students looking to improve their programming skills.
+          </p>
+        </section>
       </div>
     </Layout>
   );
