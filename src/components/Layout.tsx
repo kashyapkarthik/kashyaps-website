@@ -87,11 +87,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </div>
           
-          {/* Status Bar */}
-          <div className="bg-secondary text-muted-foreground py-1 px-3 text-xs border-t border-border flex">
-            <div className="flex-1">kashyap-karthik-portfolio</div>
-            <div>TypeScript • UTF-8</div>
-          </div>
+          {/* Status Bar - Removed */}
         </div>
       </div>
     </div>
