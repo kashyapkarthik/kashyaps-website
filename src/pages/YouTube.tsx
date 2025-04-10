@@ -44,8 +44,7 @@ const YouTube = () => {
           {"</ul>"}
         </CodeLine>
         <CodeLine number={13}>
-          {/* Closing return parenthesis */}
-          );
+          {`);`}
         </CodeLine>
         <CodeLine number={14}>
           {'};'}
