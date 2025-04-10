@@ -7,10 +7,10 @@ import {
   Youtube, 
   BookOpen, 
   HelpCircle,
+  ChevronDown,
   Menu
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-import ThemeToggle from './ThemeToggle';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -61,28 +61,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* Top Bar with toggle button and theme toggle */}
-      <div className="flex items-center justify-between border-b border-border bg-secondary text-sm h-10">
-        <div className="flex items-center">
-          <button 
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2 hover:bg-muted transition-colors duration-200"
-            aria-label="Toggle sidebar"
-          >
-            <Menu size={16} />
-          </button>
-          <div className="border-l border-border h-8"></div>
-          <div className="px-4 py-2">
-            <span className="text-foreground font-bold">Kashyap Karthik</span>
-          </div>
-        </div>
-        <div className="px-3">
-          <ThemeToggle />
+      {/* Simplified Top Bar with only toggle button */}
+      <div className="flex items-center border-b border-border bg-secondary text-sm h-10">
+        <button 
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="p-2 hover:bg-muted transition-colors duration-200"
+          aria-label="Toggle sidebar"
+        >
+          <Menu size={16} />
+        </button>
+        <div className="border-l border-border h-8"></div>
+        <div className="px-4 py-2">
+          <span className="text-foreground font-bold">Kashyap Karthik</span>
         </div>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
+        {/* Slimmer Sidebar without Explorer label */}
         <div className={`border-r border-border bg-secondary 
           transition-all duration-300 ease-in-out overflow-hidden flex flex-col
           ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'}`}
