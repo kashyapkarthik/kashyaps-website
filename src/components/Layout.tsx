@@ -7,10 +7,10 @@ import {
   Youtube, 
   BookOpen, 
   HelpCircle,
+  ChevronDown,
   Menu
 } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-import ThemeToggle from './ThemeToggle';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -61,28 +61,23 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* Top Bar with toggle button and theme toggle */}
-      <div className="flex items-center justify-between border-b border-border bg-secondary text-sm h-10">
-        <div className="flex items-center">
-          <button 
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2 hover:bg-muted transition-colors duration-200"
-            aria-label="Toggle sidebar"
-          >
-            <Menu size={16} />
-          </button>
-          <div className="border-l border-border h-8"></div>
-          <div className="px-4 py-2">
-            <span className="text-foreground font-bold">Kashyap Karthik</span>
-          </div>
-        </div>
-        <div className="px-3">
-          <ThemeToggle />
+      {/* Simplified Top Bar with only toggle button */}
+      <div className="flex items-center border-b border-border bg-secondary text-sm h-10">
+        <button 
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="p-2 hover:bg-muted transition-colors duration-200"
+          aria-label="Toggle sidebar"
+        >
+          <Menu size={16} />
+        </button>
+        <div className="border-l border-border h-8"></div>
+        <div className="px-4 py-2">
+          <span className="text-foreground font-bold">Kashyap Karthik</span>
         </div>
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar - removed transitions that cause color gradient effects */}
+        {/* Slimmer Sidebar without Explorer label */}
         <div className={`border-r border-border bg-secondary 
           transition-all duration-300 ease-in-out overflow-hidden flex flex-col
           ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'}`}
@@ -92,12 +87,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link 
                 to={item.path} 
                 key={item.path}
-                className={`flex items-center p-1.5 text-sm rounded-sm transition-colors
+                className={`flex items-center p-1.5 text-sm rounded-sm transition-colors duration-200
                   ${location.pathname === item.path 
                     ? 'bg-muted text-foreground' 
-                    : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground'}`}
+                    : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground hover:translate-x-0.5'}`}
               >
-                <span className="mr-2">{item.icon}</span>
+                <span className={`mr-2 transition-transform duration-200 ${location.pathname !== item.path ? 'group-hover:scale-110' : ''}`}>{item.icon}</span>
                 <span>{item.label}</span>
               </Link>
             ))}
