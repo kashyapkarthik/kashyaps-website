@@ -62,16 +62,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Explorer Sidebar */}
+        {/* Slimmer Sidebar without Explorer label */}
         <div className={`border-r border-border bg-secondary 
-          ${sidebarOpen ? 'w-48 md:w-64' : 'w-0'} 
+          ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'} 
           transition-all duration-200 overflow-hidden flex flex-col`}
         >
-          <div className="p-2 border-b border-border flex items-center">
-            <ChevronDown size={16} className="mr-1.5" />
-            <span className="font-semibold">Explorer</span>
-          </div>
-          <div className="p-1.5 flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto p-1.5">
             {navItems.map(item => (
               <Link 
                 to={item.path} 
