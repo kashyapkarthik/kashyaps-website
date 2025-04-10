@@ -17,30 +17,30 @@ const Index = () => {
           <span className="keyword">return</span> (
         </CodeLine>
         <CodeLine number={5} indent={2}>
-          <span className="constant">{'<div>'}</span>
+          {'<div>'}
         </CodeLine>
         <CodeLine number={6} indent={3}>
-          <span className="constant">{'<h1>'}</span>
+          {'<h1>'}
           Hello, I'm <span className="string">Kashyap Karthik</span>
-          <span className="constant">{'</h1>'}</span>
+          {'</h1>'}
         </CodeLine>
         <CodeLine number={7} indent={3}>
-          <span className="constant">{'<p>'}</span>
+          {'<p>'}
           <span className="comment">{'// Your brief introduction goes here'}</span>
-          <span className="constant">{'</p>'}</span>
+          {'</p>'}
         </CodeLine>
         <CodeLine number={8} indent={3}>
-          <span className="constant">{'<p>'}</span>
+          {'<p>'}
           <span className="comment">{'// Your skills and interests go here'}</span>
-          <span className="constant">{'</p>'}</span>
+          {'</p>'}
         </CodeLine>
         <CodeLine number={9} indent={3}>
-          <span className="constant">{'<p>'}</span>
+          {'<p>'}
           <span className="comment">{'// Your background information goes here'}</span>
-          <span className="constant">{'</p>'}</span>
+          {'</p>'}
         </CodeLine>
         <CodeLine number={10} indent={2}>
-          <span className="constant">{'</div>'}</span>
+          {'</div>'}
         </CodeLine>
         <CodeLine number={11} indent={1}>
           );

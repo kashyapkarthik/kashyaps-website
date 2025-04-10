@@ -17,57 +17,57 @@ const CV = () => {
           <span className="keyword">return</span> (
         </CodeLine>
         <CodeLine number={5} indent={2}>
-          <span className="constant">{'<div>'}</span>
+          {'<div>'}
         </CodeLine>
         <CodeLine number={6} indent={3}>
-          <span className="constant">{'<h1>'}</span>
+          {'<h1>'}
           <span className="string">Curriculum Vitae</span>
-          <span className="constant">{'</h1>'}</span>
+          {'</h1>'}
         </CodeLine>
         <CodeLine number={7} indent={3}>
-          <span className="constant">{'<section>'}</span>
+          {'<section>'}
         </CodeLine>
         <CodeLine number={8} indent={4}>
-          <span className="constant">{'<h2>'}</span>
+          {'<h2>'}
           <span className="string">Education</span>
-          <span className="constant">{'</h2>'}</span>
+          {'</h2>'}
         </CodeLine>
         <CodeLine number={9} indent={4}>
           <span className="comment">{'// Your education details go here'}</span>
         </CodeLine>
         <CodeLine number={10} indent={3}>
-          <span className="constant">{'</section>'}</span>
+          {'</section>'}
         </CodeLine>
         <CodeLine number={11} indent={3}>
-          <span className="constant">{'<section>'}</span>
+          {'<section>'}
         </CodeLine>
         <CodeLine number={12} indent={4}>
-          <span className="constant">{'<h2>'}</span>
+          {'<h2>'}
           <span className="string">Experience</span>
-          <span className="constant">{'</h2>'}</span>
+          {'</h2>'}
         </CodeLine>
         <CodeLine number={13} indent={4}>
           <span className="comment">{'// Your work experience goes here'}</span>
         </CodeLine>
         <CodeLine number={14} indent={3}>
-          <span className="constant">{'</section>'}</span>
+          {'</section>'}
         </CodeLine>
         <CodeLine number={15} indent={3}>
-          <span className="constant">{'<section>'}</span>
+          {'<section>'}
         </CodeLine>
         <CodeLine number={16} indent={4}>
-          <span className="constant">{'<h2>'}</span>
+          {'<h2>'}
           <span className="string">Skills</span>
-          <span className="constant">{'</h2>'}</span>
+          {'</h2>'}
         </CodeLine>
         <CodeLine number={17} indent={4}>
           <span className="comment">{'// Your skills go here'}</span>
         </CodeLine>
         <CodeLine number={18} indent={3}>
-          <span className="constant">{'</section>'}</span>
+          {'</section>'}
         </CodeLine>
         <CodeLine number={19} indent={2}>
-          <span className="constant">{'</div>'}</span>
+          {'</div>'}
         </CodeLine>
         <CodeLine number={20} indent={1}>
           );
