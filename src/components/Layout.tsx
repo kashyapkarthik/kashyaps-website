@@ -50,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="flex items-center border-b border-border bg-secondary text-sm h-10">
         <button 
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="p-2 hover:bg-muted"
+          className="p-2 hover:bg-muted transition-colors duration-200"
           aria-label="Toggle sidebar"
         >
           <Menu size={16} />
@@ -72,12 +72,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link 
                 to={item.path} 
                 key={item.path}
-                className={`flex items-center p-1.5 text-sm rounded-sm
+                className={`flex items-center p-1.5 text-sm rounded-sm transition-all duration-200
                   ${location.pathname === item.path 
                     ? 'bg-muted text-foreground' 
-                    : 'text-muted-foreground hover:bg-muted/50'}`}
+                    : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground hover:translate-x-0.5'}`}
               >
-                <span className="mr-2">{item.icon}</span>
+                <span className={`mr-2 transition-transform duration-200 ${location.pathname !== item.path ? 'group-hover:scale-110' : ''}`}>{item.icon}</span>
                 <span>{item.label}</span>
               </Link>
             ))}

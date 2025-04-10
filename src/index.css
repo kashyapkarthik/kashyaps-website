@@ -103,4 +103,14 @@
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
   }
+  
+  /* Subtle sidebar animations */
+  @keyframes subtle-slide {
+    0% { transform: translateX(-2px); opacity: 0.8; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  .sidebar-enter {
+    animation: subtle-slide 0.2s ease-out forwards;
+  }
 }
