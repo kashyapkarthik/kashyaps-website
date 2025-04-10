@@ -9,7 +9,7 @@ const Advice = () => {
         <CodeLine number={1}>
           <span className="keyword">import</span> React <span className="keyword">from</span> <span className="string">'react'</span>;
         </CodeLine>
-        <CodeLine number={2}></CodeLine>
+        <CodeLine number={2}>{''}</CodeLine>
         <CodeLine number={3}>
           <span className="keyword">const</span> <span className="function">Advice</span> = () <span>=&gt;</span> {'{'}
         </CodeLine>
@@ -80,7 +80,7 @@ const Advice = () => {
         <CodeLine number={22}>
           {'};'}
         </CodeLine>
-        <CodeLine number={23}></CodeLine>
+        <CodeLine number={23}>{''}</CodeLine>
         <CodeLine number={24}>
           <span className="keyword">export</span> <span className="keyword">default</span> Advice;
         </CodeLine>

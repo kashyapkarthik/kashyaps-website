@@ -9,7 +9,7 @@ const Index = () => {
         <CodeLine number={1}>
           <span className="keyword">import</span> React <span className="keyword">from</span> <span className="string">'react'</span>;
         </CodeLine>
-        <CodeLine number={2}></CodeLine>
+        <CodeLine number={2}>{''}</CodeLine>
         <CodeLine number={3}>
           <span className="keyword">const</span> <span className="function">AboutMe</span> = () <span>=&gt;</span> {'{'}
         </CodeLine>
@@ -48,7 +48,7 @@ const Index = () => {
         <CodeLine number={12}>
           {'};'}
         </CodeLine>
-        <CodeLine number={13}></CodeLine>
+        <CodeLine number={13}>{''}</CodeLine>
         <CodeLine number={14}>
           <span className="keyword">export</span> <span className="keyword">default</span> AboutMe;
         </CodeLine>
