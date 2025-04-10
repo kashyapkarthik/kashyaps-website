@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   FileText, 
@@ -19,6 +19,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [showHeader, setShowHeader] = useState(false);
   const isMobile = useIsMobile();
   
   // Auto-close sidebar on mobile
@@ -29,6 +30,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       setSidebarOpen(true);
     }
   }, [isMobile]);
+
+  // Control header visibility based on sidebar state
+  useEffect(() => {
+    if (sidebarOpen) {
+      setShowHeader(false);
+    } else {
+      // Add a small delay to ensure the header appears only after sidebar is fully closed
+      const timer = setTimeout(() => {
+        setShowHeader(true);
+      }, 300); // Match the sidebar transition duration
+      
+      return () => clearTimeout(timer);
+    }
+  }, [sidebarOpen]);
 
   const navItems = [
     { path: '/', label: 'About Me', icon: <User size={16} /> },
@@ -86,13 +101,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Main Content */}
         <div className="flex-1 overflow-hidden flex flex-col">
-          {/* File Tab - only show when sidebar is closed */}
-          {!sidebarOpen && (
+          {/* File Tab - only show when sidebar is fully closed */}
+          {showHeader && (
             <div className="bg-secondary border-b border-border px-3 py-1 text-sm flex items-center">
               <span className="mr-2">{
                 navItems.find(item => item.path === location.pathname)?.icon
               }</span>
-              <span className="text-foreground">{getCurrentFile()}.tsx</span>
+              <span className="text-foreground">{getCurrentFile()}</span>
             </div>
           )}
           
