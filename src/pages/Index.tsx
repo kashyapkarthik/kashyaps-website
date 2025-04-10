@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 const Index = () => {
   return (
     <Layout>
-      <div className="p-6 mx-0">
+      <div className="p-6 mx-0 max-w-2xl">
         <h1 className="text-2xl font-bold mb-4">Hello, I'm Kashyap Karthik</h1>
         
         <section className="mb-6">
