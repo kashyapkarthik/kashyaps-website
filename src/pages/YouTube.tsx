@@ -11,7 +11,7 @@ const YouTube = () => {
           import React from 'react';
         </CodeLine>
         <CodeLine number={2}>
-          
+          {/* Empty line */}
         </CodeLine>
         <CodeLine number={3}>
           const YouTube = () ={">"} {'{'}
@@ -50,7 +50,7 @@ const YouTube = () => {
           {'};'}
         </CodeLine>
         <CodeLine number={15}>
-          
+          {/* Empty line */}
         </CodeLine>
         <CodeLine number={16}>
           export default YouTube;
