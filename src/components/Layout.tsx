@@ -82,7 +82,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
+        {/* Sidebar - removed transitions that cause color gradient effects */}
         <div className={`border-r border-border bg-secondary 
           transition-all duration-300 ease-in-out overflow-hidden flex flex-col
           ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'}`}
@@ -92,12 +92,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link 
                 to={item.path} 
                 key={item.path}
-                className={`flex items-center p-1.5 text-sm rounded-sm transition-colors duration-200
+                className={`flex items-center p-1.5 text-sm rounded-sm transition-colors
                   ${location.pathname === item.path 
                     ? 'bg-muted text-foreground' 
-                    : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground hover:translate-x-0.5'}`}
+                    : 'text-muted-foreground hover:bg-muted/70 hover:text-foreground'}`}
               >
-                <span className={`mr-2 transition-transform duration-200 ${location.pathname !== item.path ? 'group-hover:scale-110' : ''}`}>{item.icon}</span>
+                <span className="mr-2">{item.icon}</span>
                 <span>{item.label}</span>
               </Link>
             ))}
