@@ -86,13 +86,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Main Content */}
         <div className="flex-1 overflow-hidden flex flex-col">
-          {/* File Tab */}
-          <div className="bg-secondary border-b border-border px-3 py-1 text-sm flex items-center">
-            <span className="mr-2">{
-              navItems.find(item => item.path === location.pathname)?.icon
-            }</span>
-            <span className="text-foreground">{getCurrentFile()}.tsx</span>
-          </div>
+          {/* File Tab - only show when sidebar is closed */}
+          {!sidebarOpen && (
+            <div className="bg-secondary border-b border-border px-3 py-1 text-sm flex items-center">
+              <span className="mr-2">{
+                navItems.find(item => item.path === location.pathname)?.icon
+              }</span>
+              <span className="text-foreground">{getCurrentFile()}.tsx</span>
+            </div>
+          )}
           
           {/* Editor Content */}
           <div className="flex-1 overflow-auto p-0">
