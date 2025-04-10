@@ -65,7 +65,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* Slimmer Sidebar without Explorer label */}
         <div className={`border-r border-border bg-secondary 
           ${sidebarOpen ? 'w-36 md:w-44' : 'w-0'} 
-          transition-all duration-200 overflow-hidden flex flex-col`}
+          transition-all duration-300 ease-in-out overflow-hidden flex flex-col`}
         >
           <div className="flex-1 overflow-y-auto p-1.5">
             {navItems.map(item => (
