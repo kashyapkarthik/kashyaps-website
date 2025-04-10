@@ -10,7 +10,8 @@ interface CodeLineProps {
 const CodeLine: React.FC<CodeLineProps> = ({ number, indent = 0, children }) => {
   return (
     <div className="editor-line">
-      <div className="line-numbers">{number}</div>
+      {/* Line numbers div is kept but hidden with CSS */}
+      <div className="line-numbers hidden">{number}</div>
       <div className="editor-content" style={{ paddingLeft: `${indent * 2}ch` }}>
         {children}
       </div>

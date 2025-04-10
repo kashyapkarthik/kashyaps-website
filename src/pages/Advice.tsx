@@ -1,4 +1,3 @@
-
 import CodeLine from '@/components/CodeLine';
 import Layout from '@/components/Layout';
 
@@ -17,71 +16,37 @@ const Advice = () => {
           <span className="keyword">return</span> (
         </CodeLine>
         <CodeLine number={5} indent={2}>
-          {'<div>'}
+          <span className="string">Professional Advice</span>
         </CodeLine>
         <CodeLine number={6} indent={3}>
-          {'<h1>'}
-          <span className="string">Professional Advice</span>
-          {'</h1>'}
+          <span className="comment">// Your advice introduction goes here</span>
         </CodeLine>
-        <CodeLine number={7} indent={3}>
-          {'<p>'}
-          <span className="comment">{'// Your advice introduction goes here'}</span>
-          {'</p>'}
+        <CodeLine number={7} indent={2}>
+          <span className="string">Career Development</span>
         </CodeLine>
         <CodeLine number={8} indent={3}>
-          {'<section>'}
+          <span className="comment">// Your career advice goes here</span>
         </CodeLine>
-        <CodeLine number={9} indent={4}>
-          {'<h2>'}
-          <span className="string">Career Development</span>
-          {'</h2>'}
+        <CodeLine number={9} indent={2}>
+          <span className="string">Professional Growth</span>
         </CodeLine>
-        <CodeLine number={10} indent={4}>
-          <span className="comment">{'// Your career advice goes here'}</span>
+        <CodeLine number={10} indent={3}>
+          <span className="comment">// Your professional growth tips go here</span>
         </CodeLine>
-        <CodeLine number={11} indent={3}>
-          {'</section>'}
+        <CodeLine number={11} indent={2}>
+          <span className="string">Resources</span>
         </CodeLine>
         <CodeLine number={12} indent={3}>
-          {'<section>'}
+          <span className="comment">// Recommended resources go here</span>
         </CodeLine>
-        <CodeLine number={13} indent={4}>
-          {'<h2>'}
-          <span className="string">Professional Growth</span>
-          {'</h2>'}
-        </CodeLine>
-        <CodeLine number={14} indent={4}>
-          <span className="comment">{'// Your professional growth tips go here'}</span>
-        </CodeLine>
-        <CodeLine number={15} indent={3}>
-          {'</section>'}
-        </CodeLine>
-        <CodeLine number={16} indent={3}>
-          {'<section>'}
-        </CodeLine>
-        <CodeLine number={17} indent={4}>
-          {'<h2>'}
-          <span className="string">Resources</span>
-          {'</h2>'}
-        </CodeLine>
-        <CodeLine number={18} indent={4}>
-          <span className="comment">{'// Recommended resources go here'}</span>
-        </CodeLine>
-        <CodeLine number={19} indent={3}>
-          {'</section>'}
-        </CodeLine>
-        <CodeLine number={20} indent={2}>
-          {'</div>'}
-        </CodeLine>
-        <CodeLine number={21} indent={1}>
+        <CodeLine number={13} indent={1}>
           );
         </CodeLine>
-        <CodeLine number={22}>
+        <CodeLine number={14}>
           {'};'}
         </CodeLine>
-        <CodeLine number={23}>{''}</CodeLine>
-        <CodeLine number={24}>
+        <CodeLine number={15}>{''}</CodeLine>
+        <CodeLine number={16}>
           <span className="keyword">export</span> <span className="keyword">default</span> Advice;
         </CodeLine>
       </div>

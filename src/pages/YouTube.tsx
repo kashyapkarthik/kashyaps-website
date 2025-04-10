@@ -1,4 +1,3 @@
-
 import CodeLine from '@/components/CodeLine';
 import Layout from '@/components/Layout';
 
@@ -17,47 +16,37 @@ const YouTube = () => {
           <span className="keyword">return</span> (
         </CodeLine>
         <CodeLine number={5} indent={2}>
-          {'<div>'}
+          <span className="string">My YouTube Channel</span>
         </CodeLine>
         <CodeLine number={6} indent={3}>
-          {'<h1>'}
-          <span className="string">My YouTube Channel</span>
-          {'</h1>'}
+          <span className="comment">// Your channel description goes here</span>
         </CodeLine>
         <CodeLine number={7} indent={3}>
-          {'<p>'}
-          <span className="comment">{'// Your channel description goes here'}</span>
-          {'</p>'}
+          <div>
         </CodeLine>
-        <CodeLine number={8} indent={3}>
-          {'<div>'}
+        <CodeLine number={8} indent={4}>
+          <span className="comment">// Embed your featured videos here</span>
         </CodeLine>
-        <CodeLine number={9} indent={4}>
-          <span className="comment">{'// Embed your featured videos here'}</span>
+        <CodeLine number={9} indent={3}>
+          </div>
         </CodeLine>
         <CodeLine number={10} indent={3}>
-          {'</div>'}
+          <ul>
         </CodeLine>
-        <CodeLine number={11} indent={3}>
-          {'<ul>'}
+        <CodeLine number={11} indent={4}>
+          <span className="comment">// List of your video playlists or categories</span>
         </CodeLine>
-        <CodeLine number={12} indent={4}>
-          <span className="comment">{'// List of your video playlists or categories'}</span>
+        <CodeLine number={12} indent={3}>
+          </ul>
         </CodeLine>
-        <CodeLine number={13} indent={3}>
-          {'</ul>'}
-        </CodeLine>
-        <CodeLine number={14} indent={2}>
-          {'</div>'}
-        </CodeLine>
-        <CodeLine number={15} indent={1}>
+        <CodeLine number={13} indent={1}>
           );
         </CodeLine>
-        <CodeLine number={16}>
+        <CodeLine number={14}>
           {'};'}
         </CodeLine>
-        <CodeLine number={17}>{''}</CodeLine>
-        <CodeLine number={18}>
+        <CodeLine number={15}>{''}</CodeLine>
+        <CodeLine number={16}>
           <span className="keyword">export</span> <span className="keyword">default</span> YouTube;
         </CodeLine>
       </div>
