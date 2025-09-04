@@ -7,6 +7,7 @@ import {
   Youtube, 
   BookOpen, 
   HelpCircle,
+  Mountain,
   ChevronDown,
   Menu
 } from 'lucide-react';
@@ -36,6 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { path: '/youtube', label: 'YouTube', icon: <Youtube size={16} /> },
     { path: '/tutoring', label: 'Tutoring', icon: <BookOpen size={16} /> },
     { path: '/advice', label: 'Advice', icon: <HelpCircle size={16} /> },
+    { path: '/hiking', label: 'Hiking', icon: <Mountain size={16} /> },
   ];
 
   return (

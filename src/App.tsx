@@ -9,6 +9,7 @@ import CV from "./pages/CV";
 import YouTube from "./pages/YouTube";
 import Tutoring from "./pages/Tutoring";
 import Advice from "./pages/Advice";
+import Hiking from "./pages/Hiking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/youtube" element={<YouTube />} />
           <Route path="/tutoring" element={<Tutoring />} />
           <Route path="/advice" element={<Advice />} />
+          <Route path="/hiking" element={<Hiking />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

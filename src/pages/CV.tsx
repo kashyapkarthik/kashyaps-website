@@ -18,11 +18,11 @@ const CV = () => {
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-4 border-b pb-2">Profile</h2>
           <p className="mb-3">
-            A hard-working student who doesn't waste your time by writing fluff here.
+            A hard-working maths student at Imperial College London who doesn't waste your time by writing fluff here.
+
           </p>
           <p className="mb-3">
-            My primary skills are learning fast and adapting to the changing world around me.
-            Interested in solving hard problems in novel ways.
+            My proudest achievemment was hiking the length of Britain, from John O'Groats to Land's End, in the summer of 2025.
           </p>
         </section>
 
@@ -114,7 +114,7 @@ const CV = () => {
               <p className="text-sm text-gray-400">Sep 2022 — Jul 2024</p>
             </div>
             <p className="mb-2">A* - Mathematics, A* - Further Mathematics, A* - Physics, A - Computer Science</p>
-            <p>Grade 2 in STEP 2, Merit in Advanced Extension Award and awarded the H.J Godwin Prize in mathematics. Headmaster's Scholar.</p>
+            <p>Grade 2 in STEP 2, Merit in Advanced Extension Award and awarded the H.J Godwin Prize in Mathematics. Headmaster's Scholar.</p>
           </div>
 
           <div>
