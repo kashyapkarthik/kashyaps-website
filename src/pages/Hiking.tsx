@@ -76,7 +76,7 @@ const Hiking = () => {
                   {/* Content */}
                   <div className="lg:col-span-2 space-y-6">
                     <div>
-                      <h3 className="font-medium mb-3">In the Summer of 2025, I hiked the length of Britain from John O'Groats to Land's End, over 10 weeks. I wanted to test my limits and experience the beauty that the UK offers.</h3>
+                      <h3 className="font-medium mb-3">In the Summer of 2025, I hiked the length of Britain from John O'Groats to Land's End, over 10 weeks.</h3>
                       <p className="mb-3 leading-tight">
                         <strong>Distance:</strong> 1800km over 10 weeks
                       </p>
