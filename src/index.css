@@ -53,6 +53,10 @@
     font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, Monaco, Consolas, monospace;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   .code-editor {
     @apply bg-background rounded-md shadow-lg border border-border overflow-hidden;
   }
@@ -112,5 +116,276 @@
   
   .sidebar-enter {
     animation: subtle-slide 0.2s ease-out forwards;
+  }
+}
+
+@layer components {
+  .editor-tab {
+    @apply h-full flex items-center border-x border-transparent px-3 text-xs text-muted-foreground transition-colors hover:bg-muted/70 hover:text-foreground;
+  }
+
+  .editor-tab-active {
+    @apply border-border bg-background text-foreground;
+  }
+
+  .contact-button {
+    @apply inline-flex items-center gap-1.5 border border-border bg-background px-2.5 py-1.5 text-xs text-foreground transition-colors hover:border-primary hover:text-primary;
+  }
+
+  .sidebar-label {
+    @apply px-2 pb-2 pt-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground;
+  }
+
+  .sidebar-divider {
+    @apply my-3 border-t border-border;
+  }
+
+  .sidebar-contact {
+    @apply flex items-center gap-2 px-2 py-2 text-xs text-primary hover:bg-muted;
+  }
+
+  .workspace-page {
+    @apply mx-auto w-full max-w-6xl px-5 py-8 sm:px-8 sm:py-10;
+  }
+
+  .page-wide {
+    @apply max-w-7xl;
+  }
+
+  .page-kicker, .panel-label {
+    @apply mb-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground;
+  }
+
+  .page-title {
+    @apply max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl;
+  }
+
+  .page-intro {
+    @apply mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg;
+  }
+
+  .about-layout, .project-layout {
+    @apply grid gap-8 lg:grid-cols-[minmax(0,1.7fr)_minmax(260px,0.7fr)];
+  }
+
+  .about-aside {
+    @apply space-y-4 lg:pt-7;
+  }
+
+  .workspace-panel {
+    @apply border border-border bg-secondary/30 p-5;
+  }
+
+  .workspace-panel h2 {
+    @apply mt-4 text-lg font-semibold;
+  }
+
+  .workspace-panel p {
+    @apply mt-2 leading-relaxed text-muted-foreground;
+  }
+
+  .compact-panel h2 {
+    @apply mt-2;
+  }
+
+  .action-row {
+    @apply mt-6 flex flex-wrap gap-3;
+  }
+
+  .primary-action, .secondary-action {
+    @apply inline-flex items-center justify-center gap-2 border px-4 py-2.5 text-sm font-medium transition-colors;
+  }
+
+  .primary-action {
+    @apply border-primary bg-primary text-primary-foreground hover:bg-primary/85;
+  }
+
+  .secondary-action {
+    @apply border-border bg-secondary text-foreground hover:border-muted-foreground;
+  }
+
+  .text-link {
+    @apply mt-4 inline-flex items-center gap-1 text-sm text-primary hover:underline;
+  }
+
+  .highlights-grid {
+    @apply mt-10 grid gap-4 md:grid-cols-2;
+  }
+
+  .now-item {
+    @apply flex gap-2 text-sm;
+  }
+
+  .feature-list {
+    @apply mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground;
+  }
+
+  .feature-list li {
+    @apply flex gap-2;
+  }
+
+  .feature-list li::before {
+    content: '›';
+    @apply text-primary;
+  }
+
+  .project-feature {
+    @apply mt-8;
+  }
+
+  .panel-heading {
+    @apply flex items-start justify-between;
+  }
+
+  .panel-heading h2 {
+    @apply mt-0;
+  }
+
+  .tutoring-page {
+    @apply max-w-7xl;
+  }
+
+  .tutoring-hero {
+    @apply grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(280px,0.7fr)] lg:items-end;
+  }
+
+  .proof-panel dl {
+    @apply mt-5 grid grid-cols-3 gap-3;
+  }
+
+  .proof-panel dt {
+    @apply text-sm font-bold text-foreground sm:text-base;
+  }
+
+  .proof-panel dd {
+    @apply mt-1 text-xs leading-snug text-muted-foreground;
+  }
+
+  .tutoring-grid {
+    @apply mt-8 grid gap-4 lg:grid-cols-2;
+  }
+
+  .process-list {
+    @apply mt-4 space-y-4;
+  }
+
+  .process-list li {
+    @apply flex gap-3;
+  }
+
+  .process-list span {
+    @apply pt-0.5 text-xs text-primary;
+  }
+
+  .process-list strong {
+    @apply text-sm;
+  }
+
+  .process-list p, .panel-note {
+    @apply mt-1 text-sm;
+  }
+
+  .testimonial {
+    @apply my-8 border-l-2 border-primary bg-secondary/40 px-5 py-5;
+  }
+
+  .testimonial p {
+    @apply max-w-4xl text-base leading-relaxed;
+  }
+
+  .testimonial footer {
+    @apply mt-3 text-sm text-muted-foreground;
+  }
+
+  .booking-section {
+    @apply scroll-mt-6 border-t border-border pt-8;
+  }
+
+  .booking-heading h2 {
+    @apply text-2xl font-bold;
+  }
+
+  .booking-heading > p:last-child {
+    @apply mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground;
+  }
+
+  .booking-layout {
+    @apply mt-6 grid gap-5 lg:grid-cols-[minmax(280px,0.8fr)_minmax(0,1.2fr)];
+  }
+
+  .slot-picker, .booking-form {
+    @apply border border-border bg-secondary/20 p-4 sm:p-5;
+  }
+
+  .slot-picker-heading {
+    @apply flex items-center gap-2 text-sm font-medium;
+  }
+
+  .slot-list {
+    @apply mt-4 grid gap-2;
+  }
+
+  .slot-button {
+    @apply flex w-full items-center gap-2 border border-border px-3 py-2.5 text-left text-sm text-muted-foreground transition-colors hover:border-muted-foreground hover:text-foreground;
+  }
+
+  .slot-button svg:last-child {
+    @apply ml-auto text-primary;
+  }
+
+  .slot-button-selected {
+    @apply border-primary bg-primary/10 text-foreground;
+  }
+
+  .availability-note {
+    @apply mt-4 text-xs leading-relaxed text-muted-foreground;
+  }
+
+  .booking-form {
+    @apply space-y-4;
+  }
+
+  .form-row {
+    @apply grid gap-4 sm:grid-cols-2;
+  }
+
+  .booking-form label {
+    @apply grid gap-1.5 text-sm text-foreground;
+  }
+
+  .booking-form input, .booking-form select, .booking-form textarea {
+    @apply w-full border border-border bg-background px-3 py-2 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-primary;
+  }
+
+  .booking-form textarea {
+    @apply resize-y;
+  }
+
+  .submit-action {
+    @apply w-full sm:w-auto;
+  }
+
+  .form-success {
+    @apply text-sm leading-relaxed text-[var(--string)];
+  }
+
+  .contact-strip {
+    @apply my-8 grid gap-3 border-y border-border py-5 text-sm text-muted-foreground md:grid-cols-3;
+  }
+
+  .contact-strip div {
+    @apply flex items-start gap-2;
+  }
+
+  .contact-strip svg {
+    @apply mt-0.5 shrink-0 text-primary;
+  }
+
+  .contact-strip a {
+    @apply text-foreground hover:text-primary hover:underline;
+  }
+
+  .faq-list {
+    @apply max-w-3xl;
   }
 }

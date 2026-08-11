@@ -22,7 +22,7 @@ const CV = () => {
 
           </p>
           <p className="mb-3">
-            My proudest achievemment was hiking the length of Britain, from John O'Groats to Land's End, in the summer of 2025.
+            My proudest achievement was hiking the length of Britain, from John O'Groats to Land's End, in the summer of 2025.
           </p>
         </section>
 
@@ -102,7 +102,7 @@ const CV = () => {
               </div>
               <p className="text-sm text-gray-400">Sep 2025 — Jul 2028</p>
             </div>
-            <p>Starting my studies in September 2025</p>
+            <p>Currently studying Mathematics at Imperial College London.</p>
           </div>
 
           <div className="mb-6">
