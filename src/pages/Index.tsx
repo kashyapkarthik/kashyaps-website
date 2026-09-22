@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 
@@ -6,32 +6,26 @@ const Index = () => {
   return (
     <Layout>
       <main className="workspace-page page-wide">
-        <div className="page-kicker">about.md</div>
+        <div className="page-kicker">home.md</div>
         <div className="about-layout">
           <section>
-            <h1 className="page-title">Hello, I’m Kashyap.</h1>
+            <h1 className="page-title">Maths tutoring, built around practice.</h1>
             <p className="page-intro">
-              I’m a maths student at Imperial College London. I enjoy difficult problems, helping people make sense of them, and taking on adventures with a slightly unreasonable number of kilometres involved.
+              I’m Kashyap, a Mathematics student at Imperial College London. I tutor GCSE and A-level maths with a simple goal: understand a topic properly, then do enough practice that it holds up in an exam.
             </p>
             <div className="action-row">
               <Link className="primary-action" to="/tutoring#enquire">
-                Find out about tutoring <ArrowRight size={16} aria-hidden="true" />
+                Book an onboarding call <ArrowRight size={16} aria-hidden="true" />
               </Link>
-              <Link className="secondary-action" to="/hiking">See the adventures</Link>
+              <Link className="secondary-action" to="/tutoring">How tutoring works</Link>
             </div>
 
-            <div className="highlights-grid">
-              <article className="workspace-panel">
+            <div className="highlights-grid highlights-grid-single">
+              <article className="workspace-panel tutoring-highlight">
                 <BookOpen size={20} aria-hidden="true" />
-                <h2>Teaching maths</h2>
-                <p>Over 150 hours of GCSE and A-level tutoring, with an emphasis on understanding rather than memorising.</p>
-                <Link className="text-link" to="/tutoring">Tutoring details <ArrowRight size={15} aria-hidden="true" /></Link>
-              </article>
-              <article className="workspace-panel">
-                <Sparkles size={20} aria-hidden="true" />
-                <h2>Building Lumina Maths</h2>
-                <p>A focused revision resource based on the help I wanted as both a student and tutor.</p>
-                <Link className="text-link" to="/projects">Project notes <ArrowRight size={15} aria-hidden="true" /></Link>
+                <h2>More than the hour in the lesson</h2>
+                <p>Every student gets a clear revision structure, carefully chosen homework, marking and feedback, regular revisiting of older topics, and support with questions and past papers between lessons.</p>
+                <Link className="text-link" to="/tutoring#fees">What is included <ArrowRight size={15} aria-hidden="true" /></Link>
               </article>
             </div>
           </section>

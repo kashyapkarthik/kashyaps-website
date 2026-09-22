@@ -9,7 +9,6 @@ import CV from "./pages/CV";
 import Tutoring from "./pages/Tutoring";
 import Hiking from "./pages/Hiking";
 import NotFound from "./pages/NotFound";
-import Projects from "./pages/Projects";
 
 const queryClient = new QueryClient();
 
@@ -22,10 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/cv" element={<CV />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/youtube" element={<Projects />} />
           <Route path="/tutoring" element={<Tutoring />} />
-          <Route path="/advice" element={<Projects />} />
           <Route path="/hiking" element={<Hiking />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

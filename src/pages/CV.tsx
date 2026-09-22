@@ -49,19 +49,6 @@ const CV = () => {
           <div className="mb-6">
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h3 className="font-medium">Founder</h3>
-                <p className="text-sm text-gray-400">Lumina Maths</p>
-              </div>
-              <p className="text-sm text-gray-400">Mar 2025 — Present</p>
-            </div>
-            <p>
-              Creating the resources I wish I had as a student and as a teacher. Leveraging my unique experiences - as a teenager and experienced maths tutor - with the latest AI technologies to create the ultimate revision resource. We provide the most helpful maths assistant, a massive database of specification-matched questions with accurate markschemes, and a no-nonsense user experience to help students master any topic.
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <div className="flex justify-between items-start mb-2">
-              <div>
                 <h3 className="font-medium">Squash Coach</h3>
                 <p className="text-sm text-gray-400">Redland Green Squash Club</p>
               </div>

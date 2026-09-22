@@ -212,6 +212,14 @@
     @apply mt-10 grid gap-4 md:grid-cols-2;
   }
 
+  .highlights-grid-single {
+    @apply md:grid-cols-1;
+  }
+
+  .tutoring-highlight {
+    @apply max-w-3xl;
+  }
+
   .now-item {
     @apply flex gap-2 text-sm;
   }
@@ -283,6 +291,46 @@
 
   .process-list p, .panel-note {
     @apply mt-1 text-sm;
+  }
+
+  .fee-section {
+    @apply mt-8 grid gap-5 border-t border-border pt-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(340px,1.1fr)];
+  }
+
+  .fee-section h2 {
+    @apply text-2xl font-bold;
+  }
+
+  .fee-section > div > p:last-child {
+    @apply mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground;
+  }
+
+  .fee-cards {
+    @apply grid grid-cols-2 gap-4;
+  }
+
+  .fee-card {
+    @apply p-4;
+  }
+
+  .fee-card .panel-label {
+    @apply mb-1;
+  }
+
+  .fee-price {
+    @apply mt-0 !text-2xl font-bold text-foreground;
+  }
+
+  .fee-price span {
+    @apply text-xs font-normal text-muted-foreground;
+  }
+
+  .included-panel {
+    @apply lg:col-span-2;
+  }
+
+  .included-panel h3 {
+    @apply text-base font-semibold;
   }
 
   .testimonial {

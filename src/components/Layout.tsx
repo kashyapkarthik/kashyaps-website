@@ -1,12 +1,11 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   FileText, 
   User, 
   BookOpen, 
   Mountain,
-  Lightbulb,
   Menu,
   Mail
 } from 'lucide-react';
@@ -31,9 +30,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [isMobile]);
 
   const navItems = [
-    { path: '/', label: 'About', file: 'about.md', icon: <User size={16} /> },
+    { path: '/', label: 'Home', file: 'home.md', icon: <User size={16} /> },
     { path: '/tutoring', label: 'Tutoring', file: 'tutoring.md', icon: <BookOpen size={16} /> },
-    { path: '/projects', label: 'Projects', file: 'projects.ts', icon: <Lightbulb size={16} /> },
     { path: '/hiking', label: 'Adventures', file: 'adventures.md', icon: <Mountain size={16} /> },
     { path: '/cv', label: 'CV', file: 'cv.pdf', icon: <FileText size={16} /> },
   ];
@@ -43,6 +41,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const closeSidebarOnMobile = () => {
     if (isMobile) setSidebarOpen(false);
   };
+
+  useEffect(() => {
+    if (!location.hash) return;
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) window.setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
+  }, [location.hash, location.pathname]);
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
@@ -55,9 +59,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Menu size={16} />
         </button>
         <div className="border-l border-border h-7" />
-        <div className="px-3 py-2 shrink-0">
-          <span className="text-foreground font-bold">Kashyap Karthik</span>
-        </div>
+        <Link to="/" className="px-3 py-2 shrink-0 text-foreground font-bold hover:text-primary transition-colors">
+          Kashyap Karthik
+        </Link>
         <div className="hidden sm:flex h-full items-end overflow-x-auto ml-3" aria-label="Open pages">
           {navItems.map((item) => (
             <Link
@@ -73,7 +77,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <span className="sm:hidden text-muted-foreground text-xs">{currentItem.file}</span>
           <Link className="contact-button" to="/tutoring#enquire">
             <Mail size={14} aria-hidden="true" />
-            <span>Contact</span>
+            <span>Book a call</span>
           </Link>
         </div>
       </div>
@@ -102,7 +106,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="sidebar-divider" />
             <Link to="/tutoring#enquire" onClick={closeSidebarOnMobile} className="sidebar-contact">
               <Mail size={15} aria-hidden="true" />
-              Book an intro call
+              Book an onboarding call
             </Link>
           </div>
         </div>
