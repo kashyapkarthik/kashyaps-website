@@ -156,6 +156,14 @@
     @apply mb-2 text-[11px] uppercase tracking-[0.14em] text-muted-foreground;
   }
 
+  .premium-kicker {
+    @apply flex items-center gap-1.5;
+  }
+
+  .premium-kicker svg {
+    @apply text-primary;
+  }
+
   .page-title {
     @apply max-w-3xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl;
   }
@@ -164,7 +172,7 @@
     @apply mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg;
   }
 
-  .about-layout, .project-layout {
+  .about-layout {
     @apply grid gap-8 lg:grid-cols-[minmax(0,1.7fr)_minmax(260px,0.7fr)];
   }
 
@@ -212,12 +220,28 @@
     @apply mt-10 grid gap-4 md:grid-cols-2;
   }
 
-  .highlights-grid-single {
-    @apply md:grid-cols-1;
+  .home-follow-up {
+    @apply mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base;
   }
 
-  .tutoring-highlight {
-    @apply max-w-3xl;
+  .inline-link {
+    @apply text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-primary hover:decoration-primary;
+  }
+
+  .maths-note {
+    @apply mt-8 flex max-w-3xl gap-4 border-l-2 border-primary bg-secondary/20 px-4 py-3;
+  }
+
+  .maths-note > svg {
+    @apply mt-0.5 shrink-0 text-primary;
+  }
+
+  .maths-note .panel-label {
+    @apply mb-1;
+  }
+
+  .maths-note div > p:last-child {
+    @apply text-sm leading-relaxed text-muted-foreground;
   }
 
   .now-item {
@@ -237,24 +261,16 @@
     @apply text-primary;
   }
 
-  .project-feature {
-    @apply mt-8;
-  }
-
-  .panel-heading {
-    @apply flex items-start justify-between;
-  }
-
-  .panel-heading h2 {
-    @apply mt-0;
-  }
-
   .tutoring-page {
     @apply max-w-7xl;
   }
 
   .tutoring-hero {
     @apply grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(280px,0.7fr)] lg:items-end;
+  }
+
+  .tutoring-hero-compact {
+    @apply gap-5;
   }
 
   .proof-panel dl {
@@ -269,40 +285,76 @@
     @apply mt-1 text-xs leading-snug text-muted-foreground;
   }
 
-  .tutoring-grid {
-    @apply mt-8 grid gap-4 lg:grid-cols-2;
+  .proof-panel-compact {
+    @apply lg:mb-0;
   }
 
-  .process-list {
-    @apply mt-4 space-y-4;
+  .section-heading {
+    @apply max-w-2xl;
   }
 
-  .process-list li {
-    @apply flex gap-3;
-  }
-
-  .process-list span {
-    @apply pt-0.5 text-xs text-primary;
-  }
-
-  .process-list strong {
-    @apply text-sm;
-  }
-
-  .process-list p, .panel-note {
-    @apply mt-1 text-sm;
-  }
-
-  .fee-section {
-    @apply mt-8 grid gap-5 border-t border-border pt-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(340px,1.1fr)];
-  }
-
-  .fee-section h2 {
+  .section-heading h2, .support-copy h2 {
     @apply text-2xl font-bold;
   }
 
-  .fee-section > div > p:last-child {
-    @apply mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground;
+  .results-section, .how-it-works, .support-section {
+    @apply mt-8 border-t border-border pt-8;
+  }
+
+  .testimonial-grid {
+    @apply mt-5 grid gap-4 lg:grid-cols-3;
+  }
+
+  .testimonial {
+    @apply border-l-2 border-primary bg-secondary/40 px-5 py-5;
+  }
+
+  .testimonial-card {
+    @apply my-0 flex flex-col justify-between;
+  }
+
+  .testimonial p {
+    @apply max-w-4xl text-sm leading-relaxed text-foreground;
+  }
+
+  .testimonial footer {
+    @apply mt-4 text-xs text-muted-foreground;
+  }
+
+  .testimonial footer span {
+    @apply mt-1 block text-primary;
+  }
+
+  .approach-grid {
+    @apply mt-5 grid gap-4 md:grid-cols-3;
+  }
+
+  .approach-grid li {
+    @apply list-none;
+  }
+
+  .approach-icon {
+    @apply flex items-center justify-between text-primary;
+  }
+
+  .approach-icon > span {
+    @apply text-xs;
+  }
+
+  .approach-grid h3 {
+    @apply mt-3 text-base font-semibold;
+  }
+
+  .approach-grid p {
+    @apply mt-2 text-sm leading-relaxed text-muted-foreground;
+  }
+
+  .support-section {
+    @apply grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)] lg:items-end;
+  }
+
+  .support-copy > p:last-of-type {
+    @apply mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground;
   }
 
   .fee-cards {
@@ -323,26 +375,6 @@
 
   .fee-price span {
     @apply text-xs font-normal text-muted-foreground;
-  }
-
-  .included-panel {
-    @apply lg:col-span-2;
-  }
-
-  .included-panel h3 {
-    @apply text-base font-semibold;
-  }
-
-  .testimonial {
-    @apply my-8 border-l-2 border-primary bg-secondary/40 px-5 py-5;
-  }
-
-  .testimonial p {
-    @apply max-w-4xl text-base leading-relaxed;
-  }
-
-  .testimonial footer {
-    @apply mt-3 text-sm text-muted-foreground;
   }
 
   .booking-section {

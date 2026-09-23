@@ -181,6 +181,20 @@ const Hiking = () => {
                       physical challenges can be powerful platforms for positive change.
                     </p>
                   </div>
+
+                  <div>
+                    <h3 className="font-medium mb-3">Watch the journey</h3>
+                    <div className="aspect-video overflow-hidden rounded-lg border border-border bg-black">
+                      <iframe
+                        className="h-full w-full"
+                        src="https://www.youtube-nocookie.com/embed/2ppc9AlszPk?start=84"
+                        title="How to spend a summer: Cycling To Munich"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -192,5 +206,4 @@ const Hiking = () => {
 };
 
 export default Hiking;
-
 
