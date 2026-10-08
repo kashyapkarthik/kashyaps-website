@@ -98,11 +98,11 @@ const Tutoring = () => {
               <footer>— Oliver, GCSE student <span>Grade 4 → 7 in two months</span></footer>
             </blockquote>
             <blockquote className="testimonial testimonial-card">
-              <p>“Kashyap has helped my son fast-track through the GCSE maths curriculum, covering all the topics needed. His exam advice has been invaluable, and he now feels much more confident and well prepared for his final exams.”</p>
+              <p>“Kashyap has helped my son fast-track through the maths curriculum, covering all the topics needed. His exam advice has been invaluable, and he now feels much more confident and well prepared for his final exams.”</p>
               <footer>— Fran, parent</footer>
             </blockquote>
             <blockquote className="testimonial testimonial-card">
-              <p>“Kashyap has a relaxed, peer-to-peer approach which has helped our son improve his confidence. The lessons have translated into better results at school. We would definitely recommend Kashyap.”</p>
+              <p>“Kashyap has a relaxed, peer-to-peer approach which has helped our son improve his confidence. The lessons have translated into better results at school. We would definitely recommend Kashyap for A-level maths.”</p>
               <footer>— Payal, parent</footer>
             </blockquote>
           </div>
