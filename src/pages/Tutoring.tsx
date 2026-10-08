@@ -132,8 +132,8 @@ const Tutoring = () => {
             </ul>
           </div>
           <div className="fee-cards">
-            <article className="workspace-panel fee-card"><p className="panel-label">GCSE</p><p className="fee-price">£45 <span>per hour</span></p></article>
-            <article className="workspace-panel fee-card"><p className="panel-label">A-level</p><p className="fee-price">£50 <span>per hour</span></p></article>
+            <article className="workspace-panel fee-card"><p className="panel-label">GCSE</p><p className="fee-price">£50 <span>per hour</span></p></article>
+            <article className="workspace-panel fee-card"><p className="panel-label">A-level</p><p className="fee-price">£55 <span>per hour</span></p></article>
           </div>
         </section>
 
