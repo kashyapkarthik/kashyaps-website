@@ -4,127 +4,118 @@ import Layout from '@/components/Layout';
 const CV = () => {
   return (
     <Layout>
-      <div className="p-6 mx-auto max-w-4xl">
-        {/* Header Section */}
-        <div className="mb-8 text-center">
+      <main className="p-6 mx-auto max-w-4xl leading-relaxed">
+        <header className="mb-8 text-center">
           <h1 className="text-3xl font-bold mb-2">Kashyap Karthik</h1>
-          <div className="text-gray-400">
-            <p>Bristol, United Kingdom</p>
-            <p>07577063863 | kashyapkarthik2000@gmail.com</p>
-          </div>
-        </div>
-
-        {/* Profile Section */}
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Profile</h2>
-          <p className="mb-3">
-            A hard-working maths student at Imperial College London who doesn't waste your time by writing fluff here.
-
+          <p className="text-sm text-muted-foreground">
+            <a href="mailto:kck25@ic.ac.uk" className="hover:text-foreground hover:underline">kck25@ic.ac.uk</a>
+            {' | '}
+            <a href="tel:07577063863" className="whitespace-nowrap hover:text-foreground hover:underline">07577 063863</a>
+            {' | '}
+            <a href="https://www.linkedin.com/in/kashyap-karthik-328678283" className="break-words hover:text-foreground hover:underline" target="_blank" rel="noopener noreferrer">linkedin.com/in/kashyap-karthik-328678283</a>
           </p>
-          <p className="mb-3">
-            My proudest achievement was hiking the length of Britain, from John O'Groats to Land's End, in the summer of 2025.
-          </p>
-        </section>
+        </header>
 
-        {/* Employment History */}
         <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Employment History</h2>
-          
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Education</h2>
           <div className="mb-6">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="font-medium">Mathematics Tutor</h3>
-                <p className="text-sm text-gray-400">Self-employed — Bristol</p>
-              </div>
-              <p className="text-sm text-gray-400">Oct 2024 — Present</p>
+            <div className="grid gap-x-4 gap-y-1 sm:grid-cols-[minmax(0,1fr)_auto] mb-2">
+              <h3 className="font-bold">Imperial College London</h3>
+              <p className="text-sm text-muted-foreground sm:text-right">Sep. 2025 – Jun. 2029 (expected)</p>
+              <p className="text-sm italic text-muted-foreground">MSci Mathematics</p>
+              <p className="text-sm italic text-muted-foreground sm:text-right">London, UK</p>
             </div>
-            <p className="mb-2">
-              Teaching maths the way I wish I was taught. Approaching lessons as a friend rather than a teacher has made students learn better, lessons go faster, and their grades improve as a byproduct of enjoying doing maths.
-            </p>
-            <blockquote className="border-l-4 border-gray-200 pl-4 italic text-gray-400">
-              "Kashyap has a relaxed, peer to peer approach which has helped our son improve his confidence with the subject. Kashyap encourages our son with his strengths but also challenges him to go further. The lessons have translated into better results at school. We would definitely recommend Kashyap."
-            </blockquote>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>First-year average: <strong>67%</strong>.</li>
+              <li>Selected first-year modules: Introduction to Computation: <strong>85%</strong>; Introduction to Applied Mathematics: <strong>84%</strong>.</li>
+              <li>Selected second-year modules: Probability for Statistics; Principles of Programming; Statistical Modelling; Lebesgue Measure and Integration.</li>
+            </ul>
           </div>
-
-          <div className="mb-6">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="font-medium">Squash Coach</h3>
-                <p className="text-sm text-gray-400">Redland Green Squash Club</p>
-              </div>
-              <p className="text-sm text-gray-400">Dec 2022 — Jan 2024</p>
-            </div>
-            <p>
-              Delivered high-quality coaching to a group of 13-15 year old kids. Communicated effectively and built a rapport with each child.
-            </p>
-          </div>
-
           <div>
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="font-medium">Volunteer</h3>
-                <p className="text-sm text-gray-400">Save Soil</p>
-              </div>
-              <p className="text-sm text-gray-400">Jun 2022 — Present</p>
+            <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:gap-4 mb-2">
+              <h3 className="font-bold">Bristol Grammar School</h3>
+              <p className="text-sm text-muted-foreground">Bristol, UK</p>
             </div>
-            <p className="mb-2">
-              Helped organise events, fundraisers and raise awareness for the global soil crisis. Highlights:
-            </p>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>Cycled 1200km over 2.5 weeks to Munich. Raised £1500 and reached over 50k people. Was featured in a local newspaper: <a href="https://www.bristol247.com/climate/news-climate/continental-cycle-save-soil/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.bristol247.com/climate/news-climate/continental-cycle-save-soil/</a></li>
-              <li>Helped organise a community soil fair, which got my community together and engaging with soil.</li>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>A-levels: Mathematics <strong>A*</strong>, Further Mathematics <strong>A*</strong>, Physics <strong>A*</strong>, Computer Science <strong>A</strong>; STEP II: <strong>Grade 2</strong>.</li>
             </ul>
           </div>
         </section>
 
-        {/* Education */}
         <section className="mb-8">
-          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Education</h2>
-          
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Research &amp; Projects</h2>
           <div className="mb-6">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="font-medium">BSc Mathematics</h3>
-                <p className="text-sm text-gray-400">Imperial College London</p>
-              </div>
-              <p className="text-sm text-gray-400">Sep 2025 — Jul 2028</p>
+            <div className="grid gap-x-4 gap-y-1 sm:grid-cols-[minmax(0,1fr)_auto] mb-2">
+              <h3 className="font-bold">Cricket Performance Forecasting: Signal and Noise</h3>
+              <p className="text-sm text-muted-foreground sm:text-right">Sep. – Oct. 2026</p>
+              <p className="text-sm italic text-muted-foreground">
+                Independent project using sports data as an analogue for financial forecasting | <a href="https://github.com/kashyapkarthik/ipl-form-forecasting" className="inline-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </p>
+              <p className="text-sm italic text-muted-foreground sm:text-right">Python</p>
             </div>
-            <p>Currently studying Mathematics at Imperial College London.</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Built a Python/pandas pipeline for <strong>1,243 IPL matches</strong>; analysed <strong>267,994 eligible deliveries across 495 players</strong> to model six-hitting probabilities and investigate whether recent performance predicts future outcomes.</li>
+              <li><strong>Adapted Brown's (2008)</strong> baseball forecasting framework using <strong>empirical Bayes (Beta-binomial) shrinkage</strong>; benchmarked early-to-late-season predictions against raw player rates and batting-position baselines using <strong>log loss and Brier score.</strong></li>
+              <li>Compared expanding, rolling and exponentially weighted histories through <strong>chronological validation</strong>; selected a <strong>300-ball rolling shrinkage model</strong> on 2024 data, reducing next-innings <strong>log loss by 1.03%</strong> versus the batting-position population baseline.</li>
+              <li>Quantified forecast uncertainty using both <strong>date and player clustered bootstrap</strong>; tested recency effects with context-adjusted regression and published <strong>110 conditional forecasts for 2027</strong>.</li>
+            </ul>
           </div>
-
-          <div className="mb-6">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="font-medium">A-level</h3>
-                <p className="text-sm text-gray-400">Bristol Grammar School</p>
-              </div>
-              <p className="text-sm text-gray-400">Sep 2022 — Jul 2024</p>
-            </div>
-            <p className="mb-2">A* - Mathematics, A* - Further Mathematics, A* - Physics, A - Computer Science</p>
-            <p>Grade 2 in STEP 2, Merit in Advanced Extension Award and awarded the H.J Godwin Prize in Mathematics. Headmaster's Scholar.</p>
-          </div>
-
           <div>
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="font-medium">GCSE</h3>
-                <p className="text-sm text-gray-400">Redland Green School</p>
-              </div>
-              <p className="text-sm text-gray-400">Oct 2019 — Jul 2022</p>
+            <div className="grid gap-x-4 gap-y-1 sm:grid-cols-[minmax(0,1fr)_auto] mb-2">
+              <h3 className="font-bold">Context-Dependent Clustering of Poker Starting Hands</h3>
+              <p className="text-sm text-muted-foreground sm:text-right">June 2026</p>
+              <p className="text-sm italic text-muted-foreground">Individual first-year research project, Imperial College London</p>
+              <p className="text-sm italic text-muted-foreground sm:text-right">Python, R</p>
             </div>
-            <p>Achieved 9, 9, 9, 9, 9, 9, 9, 9, 8 - Second highest in year.</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Generated datasets for <strong>169 Texas Hold'em starting-hand classes</strong> using Python and eval7; estimated equity using <strong>Monte-Carlo</strong> simulation with <strong>10,000 simulations per hand</strong> in heads-up and six-player scenarios.</li>
+              <li>Constructed scenario-specific numerical features and processed data frames in R; standardised features before applying <strong>Partitioning Around Medoids (PAM)</strong> to compare starting-hand profiles.</li>
+              <li>Used <strong>silhouette analysis</strong> to assess cluster counts and selected eight clusters per scenario; retained representative hands as medoids to make the classifications interpretable.</li>
+              <li>Visualised the clusters through <strong>principal component analysis (PCA)</strong> and presented a research poster comparing how hand groupings changed with playing scenario and feature selection.</li>
+            </ul>
           </div>
         </section>
 
-        {/* Languages */}
-        <section>
-          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Languages</h2>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>English (Native speaker)</li>
-            <li>Tamil (Very good command)</li>
-          </ul>
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Technical Skills</h2>
+          <div className="space-y-2">
+            <p><strong>Python:</strong> pandas, NumPy, SciPy, scikit-learn, Matplotlib, pytest, eval7; data pipelines, numerical methods and Monte Carlo simulation.</p>
+            <p><strong>R &amp; statistics:</strong> Hypothesis testing, linear regression, feature standardisation, PAM clustering, silhouette analysis and PCA.</p>
+            <p><strong>Forecasting &amp; tools:</strong> Empirical Bayes, chronological validation, bootstrap uncertainty; Git, GitHub and Jupyter notebooks.</p>
+          </div>
         </section>
-      </div>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Tutoring &amp; Volunteering</h2>
+          <div className="mb-6">
+            <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:gap-4 mb-2">
+              <h3 className="font-bold">Private Tutor</h3>
+              <p className="text-sm text-muted-foreground">3+ years</p>
+            </div>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Delivered <strong>150+ hours of tutoring</strong> over more than three years, communicating effectively with parents and children.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold mb-2">Community Volunteering &amp; Fundraising</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Helped organise and run a community fair and fundraiser; supported the preparation and delivery of the event.</li>
+              <li>Cycled <strong>1,200+ km to Munich</strong>, raising <strong>£1,500+ for Save Soil</strong> and awareness of soil conservation.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Societies &amp; Hobbies</h2>
+          <p className="mb-2"><strong>Cricket Society</strong> | Imperial Third XI player; scored <strong>93 not out</strong> in a T20 against LSE.</p>
+          <p>Squash Society | MathSoc | AlgoSoc | PokerSoc</p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold mb-4 border-b pb-2">Awards</h2>
+          <p><strong>H.J. Godwin Prize in Mathematics</strong> | Maths Scholar | Headmaster's Scholar</p>
+        </section>
+      </main>
     </Layout>
   );
 };
